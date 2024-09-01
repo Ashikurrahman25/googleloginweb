@@ -24,10 +24,10 @@
             };
             
             // Send the data back to the parent window (Unity WebGL application)
-            window.opener.postMessage(data, window.opener.location.origin);
+            //window.opener.postMessage(data, window.opener.location.origin);
         } else if (error) {
             console.error('OAuth Error:', error);
-            window.opener.postMessage({ error: error }, window.opener.location.origin);
+           // window.opener.postMessage({ error: error }, window.opener.location.origin);
         } else {
             console.error('No valid token or code found in the URL fragment.');
         }
