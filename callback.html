@@ -6,12 +6,12 @@
     <script>
         // Extract the authorization code from the URL parameters
         const urlParams = new URLSearchParams(window.location.search);
-        const authCode = urlParams.get('id_token');
+        const authCode = urlParams.get('code');
 
         // Check if the auth code exists and send it back to the opener
         if (authCode && window.opener) {
             console.log('Sending auth code back to the opener:', authCode);
-            window.opener.postMessage({ id_token: authCode }, window.location.origin);
+            window.opener.postMessage({ code: authCode }, window.location.origin);
         } else {
             console.error('No auth code found or no opener window.');
         }
