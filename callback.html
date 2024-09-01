@@ -8,13 +8,14 @@
         const urlParams = new URLSearchParams(window.location.search);
         const authCode = urlParams.get('code');
 
+        console.log(authcode);
         // Check if the auth code exists and send it back to the opener
-        if (authCode && window.opener) {
-            console.log('Sending auth code back to the opener:', authCode);
-            window.opener.postMessage({ code: authCode }, window.location.origin);
-        } else {
-            console.error('No auth code found or no opener window.');
-        }
+        //if (authCode && window.opener) {
+         //   console.log('Sending auth code back to the opener:', authCode);
+         //   window.opener.postMessage({ code: authCode }, window.location.origin);
+      //  } else {
+          //  console.error('No auth code found or no opener window.');
+       // }
     </script>
 </head>
 <body>
