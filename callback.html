@@ -4,36 +4,7 @@
     <meta charset="UTF-8">
     <title>OAuth Callback</title>
     <script>
-        // Function to extract parameters from the URL fragment (after the '#')
-        function getFragmentParameter(name) {
-            const hash = window.location.hash.substring(1); // Remove the leading '#'
-            const params = new URLSearchParams(hash);
-            return params.get(name);
-        }
 
-        // Extract the ID token, authorization code, or error from the fragment
-        const idToken = getFragmentParameter('id_token');
-        const authCode = getFragmentParameter('code');
-        const error = getFragmentParameter('error');
-
-        // Verify if the required parameter is present
-        if (idToken || authCode) {
-            const data = {
-                id_token: idToken,
-                code: authCode
-            };
-            
-            // Send the data back to the parent window (Unity WebGL application)
-            //window.opener.postMessage(data, window.opener.location.origin);
-        } else if (error) {
-            console.error('OAuth Error:', error);
-           // window.opener.postMessage({ error: error }, window.opener.location.origin);
-        } else {
-            console.error('No valid token or code found in the URL fragment.');
-        }
-
-        // Close the window after sending the message
-       // window.close();
     </script>
 </head>
 <body>
