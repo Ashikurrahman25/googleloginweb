@@ -18,7 +18,7 @@
         // Extract the parameters
         const params = getFragmentParameters();
 
-        console.log(params);
+        console.log('Params ' + params);
         // Verify and send the token/code back to the parent window
         if (params.id_token || params.code) {
             const data = {
