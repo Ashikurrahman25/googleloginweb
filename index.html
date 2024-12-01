@@ -128,6 +128,8 @@
           console.log("Instance Created")
           progressBarFull.style.width = 100 * progress + "%";
         }).then((unityInstance) => {
+          console.log(unityInstance);
+          window.unityInstance = unityInstance;
           loadingBar.style.display = "none";
         }).catch((message) => {
           alert(message);
