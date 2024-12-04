@@ -48,7 +48,7 @@
   </head>
   <body>
     <div id="unity-container">
-      <canvas id="unity-canvas" width=1920 height=1080 tabindex="-1"></canvas>
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -100,11 +100,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/uno_multiplayer_play_expierment.loader.js";
+      var loaderUrl = buildUrl + "/googleloginweb.loader.js";
       var config = {
-        dataUrl: buildUrl + "/uno_multiplayer_play_expierment.data",
-        frameworkUrl: buildUrl + "/uno_multiplayer_play_expierment.framework.js",
-        codeUrl: buildUrl + "/uno_multiplayer_play_expierment.wasm",
+        dataUrl: buildUrl + "/googleloginweb.data",
+        frameworkUrl: buildUrl + "/googleloginweb.framework.js",
+        codeUrl: buildUrl + "/googleloginweb.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Wiguiart Games",
         productName: "Officer Johnny",
